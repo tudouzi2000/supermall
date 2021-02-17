@@ -137,6 +137,7 @@
 
         // 4.让swiper元素, 显示第一个(目前是显示前面添加的最后一个元素)
         this.setTransform(-this.totalWidth);
+       
       },
 
       /**
@@ -218,6 +219,9 @@
 
   .swiper {
     display: flex;
+  }
+  .swiper img{
+    width: 100%;
   }
 
   .indicator {

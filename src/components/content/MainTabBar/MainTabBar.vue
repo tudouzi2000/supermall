@@ -59,6 +59,6 @@ name: "MainTabBar",
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>

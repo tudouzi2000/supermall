@@ -2,7 +2,7 @@
     <swiper>
        <swiper-item v-for="(item,id) in banners.list" :key="id">
            <a :href="item.link">
-             <img :src="item.image" alt="轮播图">
+             <img :src="item.image" alt="轮播图" @load="HomeSwiperImageLoad">
            </a>
        </swiper-item>
      </swiper>
@@ -24,6 +24,19 @@ props:{
      }
    }
 },
+data(){
+ return{
+    imageIsLoad:true
+ }
+},
+methods:{
+  HomeSwiperImageLoad(){
+    if(this.imageIsLoad){
+      this.$emit("SwiperImageHasLoad")
+      this.imageIsLoad =false;
+    }
+  }
+}
 }
 </script>
 

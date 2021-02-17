@@ -9,14 +9,14 @@ const instance = axios.create({
 //2.axios的拦截器
 //2.1请求拦截的作用
 instance.interceptors.request.use(config=>{
-console.log(config);
+// console.log(config);
 return config
 },err=>{
 console.log(err);
 })
 // 2.2响应拦截的作用
 instance.interceptors.response.use(res=>{
-return res.data
+return res.data //只返回了数据
 },err=>{
 console.log(err)
 })
